@@ -1,0 +1,4 @@
+name: EnderContract
+version: '${project.version}'
+main: com.blockydeer.endercontract.Main
+api-version: '1.20'
