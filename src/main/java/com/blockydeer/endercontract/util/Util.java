@@ -61,4 +61,29 @@ public class Util {
             attri.setBaseValue(damage * rate);
         });
     }
+
+    //
+    /*
+        GameManager.getGameManager().getInGamePlayerList().forEach(id -> {
+            Player player = Bukkit.getPlayerExact(id);
+            if (player == null) {
+                GameManager.getGameManager().playerGone(id);
+                return;
+            }
+
+            AtomicBoolean shouldContine = new AtomicBoolean(false);
+            player.getActivePotionEffects().forEach(potionEffect -> {
+                if (potionEffect.getType() == PotionEffectType.SPEED && potionEffect.getAmplifier() >= SLOW_AMPLIFIER) {
+                    shouldContine.set(true);
+                }
+            });
+
+            if (!shouldContine.get()) {
+                PotionEffect potionEffect = new PotionEffect(PotionEffectType.WEAKNESS, 1, SLOW_AMPLIFIER, true, false);
+                player.addPotionEffect(potionEffect);
+            } else {
+                return;
+            }
+        });
+     */
 }

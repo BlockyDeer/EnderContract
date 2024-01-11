@@ -14,6 +14,8 @@ public final class Main extends JavaPlugin {
         Main.plugin = this;
 
         Bukkit.getPluginManager().registerEvents(new EntitySpawn(), this);
+
+        GameManager.getGameManager().init();
     }
 
     @Override
