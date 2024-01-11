@@ -1,5 +1,7 @@
 package com.blockydeer.endercontract;
 
+import com.blockydeer.endercontract.listener.tag.EntitySpawn;
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public final class Main extends JavaPlugin {
@@ -11,6 +13,7 @@ public final class Main extends JavaPlugin {
         // Plugin startup logic
         Main.plugin = this;
 
+        Bukkit.getPluginManager().registerEvents(new EntitySpawn(), this);
     }
 
     @Override

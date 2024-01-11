@@ -1,12 +1,19 @@
 package com.blockydeer.endercontract.listener;
 
 import org.bukkit.event.Event;
+import org.checkerframework.checker.units.qual.A;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListenerExecuter {
+public class ListenerExecutor {
+    private static final ListenerExecutor listenerExecutor = new ListenerExecutor();
     private final List<ListenerRunnable> entitySpawnExecution = new ArrayList<>();
+    private final List<ListenerRunnable> creatureSpawnExecution = new ArrayList<>();
+
+    public static ListenerExecutor getListenerExecutor() {
+        return listenerExecutor;
+    }
 
     public void registerGameEvents(ListenerType listenerType, ListenerRunnable runnable) {
         switch (listenerType) {
@@ -17,5 +24,9 @@ public class ListenerExecuter {
 
     public void entitySpawnExecutionForEach(Event event) {
         entitySpawnExecution.forEach(runnable -> runnable.run(event));
+    }
+
+    public void creatureSpawnExecutionForEach(Event event) {
+        creatureSpawnExecution.forEach(runnable -> runnable.run(event));
     }
 }

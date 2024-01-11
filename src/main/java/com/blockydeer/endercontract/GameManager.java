@@ -1,10 +1,7 @@
 package com.blockydeer.endercontract;
 
 import com.blockydeer.endercontract.tag.Tag;
-import com.blockydeer.endercontract.tag.tags.Cage;
-import com.blockydeer.endercontract.tag.tags.StrongerMob1;
-import com.blockydeer.endercontract.tag.tags.StrongerMob2;
-import com.blockydeer.endercontract.tag.tags.StrongerMob3;
+import com.blockydeer.endercontract.tag.tags.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +12,8 @@ public class GameManager {
 
     private final List<Tag> tagList = new ArrayList<>();
 
-
+    private double monsterDamageRate = 1.0d;
+    private double monsterHpRate = 1.0d;
     public static GameManager getGameManager() {
         return gameManager;
     }
@@ -26,6 +24,12 @@ public class GameManager {
         tagList.add(new StrongerMob1());
         tagList.add(new StrongerMob2());
         tagList.add(new StrongerMob3());
+
+        tagList.add(new RottenBlood1());
+        tagList.add(new RottenBlood2());
+        tagList.add(new RottenBlood3());
+
+
     }
 
     public int getEnderDragonCount() {
@@ -34,6 +38,22 @@ public class GameManager {
 
     public void setEnderDragonCount(int enderDragonCount) {
         this.enderDragonCount = enderDragonCount;
+    }
+
+    public double getMonsterDamageRate() {
+        return monsterDamageRate;
+    }
+
+    public void monsterDamageRateTimes(double value) {
+        monsterDamageRate *= value;
+    }
+
+    public double getMonsterHpRate() {
+        return monsterHpRate;
+    }
+
+    public void monsterHpRateTimes(double value) {
+        monsterHpRate *= value;
     }
 
     public void registerTag(Tag tag) {
