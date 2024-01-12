@@ -68,6 +68,13 @@ public class GameManager {
         tagList.add(new RottenBlood3());
 
         tagList.add(new Anemia1());
+        tagList.add(new Anemia2());
+
+        tagList.add(new Weakness1());
+        tagList.add(new Weakness2());
+
+        tagList.add(new Slow1());
+        tagList.add(new Slow2());
     }
 
     public void start() {
@@ -122,20 +129,11 @@ public class GameManager {
         playerMaxHp -= value;
     }
 
-    public void registerTag(Tag tag) {
-        tagList.add(tag);
-    }
-
-
     public void tagInit() {
         tagList.forEach(Tag::init);
     }
 
     public void tagTick() {
         tagList.forEach(Tag::tick);
-    }
-
-    public void tagClean() {
-        tagList.forEach(Tag::clean);
     }
 }

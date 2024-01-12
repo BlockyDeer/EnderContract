@@ -36,8 +36,4 @@ public class Cage extends Tag {
 
     }
 
-    @Override
-    public void clean() {
-
-    }
 }

@@ -54,6 +54,17 @@ public class Util {
         });
     }
 
+    public static void monsterSetHp(double rate) {
+        Util.getAllMonster().forEach(monster -> {
+            AttributeInstance attri = Objects.requireNonNull(monster.getAttribute(Attribute.GENERIC_MAX_HEALTH));
+            double hp = attri.getBaseValue();
+            double finalHp = hp * rate;
+            attri.setBaseValue(finalHp);
+
+            monster.setHealth(finalHp);
+        });
+    }
+
     public static void monsterSetDamage(double rate) {
         Util.getAllMonster().forEach(monster -> {
             AttributeInstance attri = Objects.requireNonNull(monster.getAttribute(Attribute.GENERIC_ATTACK_DAMAGE));
@@ -61,29 +72,4 @@ public class Util {
             attri.setBaseValue(damage * rate);
         });
     }
-
-    //
-    /*
-        GameManager.getGameManager().getInGamePlayerList().forEach(id -> {
-            Player player = Bukkit.getPlayerExact(id);
-            if (player == null) {
-                GameManager.getGameManager().playerGone(id);
-                return;
-            }
-
-            AtomicBoolean shouldContine = new AtomicBoolean(false);
-            player.getActivePotionEffects().forEach(potionEffect -> {
-                if (potionEffect.getType() == PotionEffectType.SPEED && potionEffect.getAmplifier() >= SLOW_AMPLIFIER) {
-                    shouldContine.set(true);
-                }
-            });
-
-            if (!shouldContine.get()) {
-                PotionEffect potionEffect = new PotionEffect(PotionEffectType.WEAKNESS, 1, SLOW_AMPLIFIER, true, false);
-                player.addPotionEffect(potionEffect);
-            } else {
-                return;
-            }
-        });
-     */
 }

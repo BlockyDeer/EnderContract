@@ -19,8 +19,4 @@ public class Anemia1 extends Tag {
 
     }
 
-    @Override
-    public void clean() {
-
-    }
 }

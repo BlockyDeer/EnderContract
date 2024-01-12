@@ -51,6 +51,4 @@ public abstract class Tag {
     public abstract void init();
 
     public abstract void tick();
-
-    public abstract void clean();
 }

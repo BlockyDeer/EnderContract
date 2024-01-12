@@ -19,8 +19,4 @@ public class RottenBlood3 extends Tag {
 
     }
 
-    @Override
-    public void clean() {
-
-    }
 }

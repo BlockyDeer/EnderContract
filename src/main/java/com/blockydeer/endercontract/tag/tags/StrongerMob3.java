@@ -2,7 +2,6 @@ package com.blockydeer.endercontract.tag.tags;
 
 import com.blockydeer.endercontract.GameManager;
 import com.blockydeer.endercontract.tag.Tag;
-import com.blockydeer.endercontract.util.Util;
 import org.bukkit.Material;
 
 /**
@@ -23,8 +22,4 @@ public class StrongerMob3 extends Tag {
     public void tick() {
     }
 
-    @Override
-    public void clean() {
-
-    }
 }

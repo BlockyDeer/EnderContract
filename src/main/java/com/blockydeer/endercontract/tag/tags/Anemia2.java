@@ -1,6 +1,5 @@
 package com.blockydeer.endercontract.tag.tags;
 
-
 import com.blockydeer.endercontract.GameManager;
 import com.blockydeer.endercontract.tag.Tag;
 import org.bukkit.Material;
@@ -20,9 +19,5 @@ public class Anemia2 extends Tag {
 
     }
 
-    @Override
-    public void clean() {
-
-    }
 }
 

@@ -1,19 +1,8 @@
 package com.blockydeer.endercontract.tag.tags;
 
 import com.blockydeer.endercontract.GameManager;
-import com.blockydeer.endercontract.listener.ListenerRunnable;
 import com.blockydeer.endercontract.tag.Tag;
-import com.blockydeer.endercontract.util.Util;
 import org.bukkit.Material;
-import org.bukkit.attribute.Attribute;
-import org.bukkit.attribute.AttributeInstance;
-import org.bukkit.entity.EntityCategory;
-import org.bukkit.entity.LivingEntity;
-import org.bukkit.entity.Monster;
-import org.bukkit.entity.Zombie;
-import org.bukkit.event.Event;
-import org.bukkit.event.entity.CreatureSpawnEvent;
-import org.bukkit.event.entity.EntitySpawnEvent;
 
 /**
  * 怪物增强I
@@ -33,7 +22,4 @@ public class StrongerMob1 extends Tag {
     public void tick() {
     }
 
-    @Override
-    public void clean() {
-    }
 }
