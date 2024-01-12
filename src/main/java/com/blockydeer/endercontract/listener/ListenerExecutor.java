@@ -10,6 +10,7 @@ public class ListenerExecutor {
     private static final ListenerExecutor listenerExecutor = new ListenerExecutor();
     private final List<ListenerRunnable> entitySpawnExecution = new ArrayList<>();
     private final List<ListenerRunnable> creatureSpawnExecution = new ArrayList<>();
+    private final List<ListenerRunnable> inventoryMoveItemExecution = new ArrayList<>();
 
     public static ListenerExecutor getListenerExecutor() {
         return listenerExecutor;
@@ -28,5 +29,9 @@ public class ListenerExecutor {
 
     public void creatureSpawnExecutionForEach(Event event) {
         creatureSpawnExecution.forEach(runnable -> runnable.run(event));
+    }
+
+    public void inventoryMoveItemExecutionForEach(Event event) {
+        inventoryMoveItemExecution.forEach(runnable -> runnable.run(event));
     }
 }

@@ -120,6 +120,10 @@ public class GameManager {
         return playerMaxHp;
     }
 
+    public void setSlowNeutralizable(boolean slowNeutralizable) {
+        this.slowNeutralizable = slowNeutralizable;
+    }
+
     /**
      * 向“玩家最终最大血量”上减去数值
      *
