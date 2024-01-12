@@ -21,7 +21,8 @@ public class GameManager {
     private double monsterHpRate = 1.0d;
     // 玩家最终最大血量
     private double playerMaxHp = 20.0d;
-    
+
+    // 缓慢效果是否可被速度效果抵消
     private boolean slowNeutralizable = true;
 
     public static GameManager getGameManager() {
@@ -44,7 +45,7 @@ public class GameManager {
      * 向参加游戏的玩家列表中添加玩家
      *
      * @param playerId: 添加的玩家id
-     * @return 如果改玩家不在列表中，返回true，否则返回false
+     * @return 如果该玩家不在列表中，返回true，否则返回false
      */
     public boolean registerPlayer(String playerId) {
         if (inGamePlayerList.contains(playerId)) {
